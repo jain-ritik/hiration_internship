@@ -30,6 +30,6 @@ console.log('\n');
     });
     console.log('Scraping Done...');
     const json = JSON.stringify(obj);
-    fs.writeFile('myjsonfile.json', json, 'utf8',callback);
+    fs.writeFile('myjsonfile.json', json, 'utf8');
   }
 });
