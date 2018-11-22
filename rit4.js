@@ -18,7 +18,6 @@ const readline = require('readline').createInterface({
 })
 
 readline.question(`enter city name?`, (name) => {
-  console.log(`Hi ${name}!`)
 readline.close()
 A=name;
  sam();
@@ -30,8 +29,7 @@ const readline1 = require('readline').createInterface({
 })
 
 readline1.question(`enter state name?`, (name1) => {
-  console.log(`Hi ${name1}!`)
-B=name1;
+ B=name1;
 readline1.close()
  dep();
 })}
@@ -42,7 +40,6 @@ const readline2 = require('readline').createInterface({
 })
 
 readline2.question(`enter country name?`, (name2) => {
-  console.log(`Hi ${name2}!`)
 C=name2;
 readline2.close()
 rit()
@@ -50,7 +47,6 @@ rit()
 // Write Headers
 //writeStream.write(`Title\n`);
 const rit = function(){
-console.log(`https://stackoverflow.com/jobs?l=${A}%2C+${B}%2C+${C}&d=20&u=Km`)
 request(`https://stackoverflow.com/jobs?l=${A}%2C+${B}%2C+${C}&d=20&u=Km`, (error, response, html) => {
   if (!error && response.statusCode == 200) {
     const $ = cheerio.load(html);
